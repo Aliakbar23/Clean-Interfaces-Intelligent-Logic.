@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Aliakbar — Full-Stack Developer & UI/UX Specialist. Explore a playful, neo-brutalist digital portfolio showcasing modern web systems, Python automation, and interactive designs.">
+  <meta name="keywords"
+    content="Aliakbar, Muhammad Ali Akbar, neo-brutalist portfolio, web developer, responsive web, Python automation, Laravel, React">
+  <meta name="author" content="Muhammad Ali Akbar Rouf Bachas">
+  <title>Aliakbar — Full-Stack &amp; UI/UX Developer | Creative Studio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='86' height='86' x='10' y='10' rx='18' fill='%23f59e0b' stroke='%23000' stroke-width='6'/%3E%3Crect width='86' height='86' x='4' y='4' rx='18' fill='%232563eb' stroke='%23000' stroke-width='6'/%3E%3Ctext x='48%25' y='66%25' font-size='44' font-weight='900' fill='%23ffffff' font-family='Space Grotesk, sans-serif' text-anchor='middle'%3EAA%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+
+  
+</head>
+
+<body class="theme-playful" onclick="sparkleBurst(event)">
+
+  <!-- Aurora Background Effects -->
+  <div class="bg-aurora" aria-hidden="true">
+    <div class="aurora-orb aurora-orb-1"
+      style="background: radial-gradient(circle, rgba(37,99,235,0.25) 0%, rgba(37,99,235,0) 70%);"></div>
+    <div class="aurora-orb aurora-orb-2"
+      style="background: radial-gradient(circle, rgba(245,158,11,0.2) 0%, rgba(245,158,11,0) 70%);"></div>
+    <div class="aurora-orb aurora-orb-3"
+      style="background: radial-gradient(circle, rgba(13,148,136,0.15) 0%, rgba(13,148,136,0) 70%);"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation capsule">
+    <div class="nav-container">
+      <a href="#" class="nav-logo" id="nav-logo-link" aria-label="Aliakbar Portfolio Home">
+        <div class="logo-icon" aria-hidden="true" style="position: relative; width: 34px; height: 34px; display: flex; align-items: center; justify-content: center;">
+          <svg width="34" height="34" viewBox="0 0 34 34" fill="none" style="filter: drop-shadow(2px 2px 0px #000);">
+            <rect width="28" height="28" x="4" y="4" rx="8" fill="var(--color-brand-yellow)" stroke="#000" stroke-width="2.5" />
+            <rect width="28" height="28" x="0" y="0" rx="8" fill="var(--color-brand-blue)" stroke="#000" stroke-width="2.5" />
+            <text x="14" y="19" text-anchor="middle" font-size="14" font-weight="900" fill="white" font-family="Space Grotesk">A</text>
+          </svg>
+        </div>
+        <span class="logo-text"
+          style="background: linear-gradient(135deg, var(--color-brand-blue), var(--color-brand-yellow)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Aliakbar</span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#about" class="nav-link capsule-nav-link" id="nav-about">Studio</a></li>
+        <li><a href="#skills" class="nav-link capsule-nav-link" id="nav-skills">Tech Stack</a></li>
+        <li><a href="#works" class="nav-link capsule-nav-link" id="nav-works">Creations</a></li>
+        <li><a href="#playground" class="nav-link capsule-nav-link" id="nav-playground">UI Lab</a></li>
+        <li><a href="#contact" class="nav-link capsule-nav-link" id="nav-contact">Connect</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle dark/light mode">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5" />
+            <path
+              d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor"
+              stroke-currentColor-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+        <a href="https://github.com/Aliakbar23" target="_blank" rel="noopener" class="btn-ghost"
+          id="nav-github-btn">GitHub</a>
+        <a href="#playground" onclick="focusTerminal(event)" class="bouncy-btn btn-sm" id="nav-contact-btn"
+          style="padding: 8px 20px;">Let's Talk</a>
+      </div>
+
+      <button class="nav-mobile-toggle" id="mobile-menu-toggle" aria-expanded="false" aria-label="Toggle mobile menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero" aria-label="Introduction Space">
+    <div class="pill-badge" style="margin-bottom: 24px;">
+      ⚡ Tap anywhere to launch sparks!
+    </div>
+
+    <h1 class="hero-title" style="font-size: clamp(2.5rem, 6.2vw, 4.8rem); line-height: 1.15; letter-spacing: -0.02em;">
+      Clean Interfaces.<br>
+      <span
+        style="background: linear-gradient(135deg, var(--color-brand-blue), var(--color-brand-yellow)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Intelligent
+        Logic.</span>
+    </h1>
+
+    <p class="hero-subtitle"
+      style="font-size: clamp(1rem, 1.8vw, 1.15rem); max-width: 600px; color: rgba(248, 250, 252, 0.75);">
+      Hi, I'm <strong>Aliakbar</strong>. I craft high-fidelity full-stack websites, robust API backends, and Python
+      automations — styled with modern, responsive, and responsive interfaces.
+    </p>
+
+    <!-- Interactive Color Theme Changer -->
+    <div style="margin-bottom: 36px; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+      <span
+        style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255, 255, 255, 0.45); font-weight: 700;">Select
+        Theme Accent</span>
+      <div class="play-mode-pill">
+        <button class="play-mode-btn active" id="btn-theme-playful" onclick="changeThemeAccent('playful')">🔮 Neo
+          Indigo</button>
+        <button class="play-mode-btn" id="btn-theme-energetic" onclick="changeThemeAccent('energetic')">⚡ Sun
+          Yellow</button>
+        <button class="play-mode-btn" id="btn-theme-mint" onclick="changeThemeAccent('mint')">☘️ cool Mint</button>
+      </div>
+    </div>
+
+    <div class="hero-actions">
+      <a href="#works" class="bouncy-btn btn-lg" id="hero-cta-primary">
+        📁 View Creations
+      </a>
+      <a href="#playground" class="bouncy-btn bouncy-btn-outline btn-lg" id="hero-cta-playground">
+        🧪 Tweak UI Lab
+      </a>
+    </div>
+
+    <!-- Interactive Interface Simulator card -->
+    <div class="hero-preview" aria-label="Interactive visual mockup" style="max-width: 800px; margin-top: 24px;">
+      <div class="preview-window" style="border-radius: 20px; border: 3px solid #000; box-shadow: 6px 6px 0 #000;">
+        <div class="sticker-pad-header" style="background: rgba(255,255,255,0.02);">
+          <div style="display: flex; gap: 6px;">
+            <span
+              style="width: 12px; height: 12px; border-radius: 50%; background: #000; border: 2px solid #fff;"></span>
+            <span
+              style="width: 12px; height: 12px; border-radius: 50%; background: #000; border: 2px solid #fff;"></span>
+            <span
+              style="width: 12px; height: 12px; border-radius: 50%; background: #000; border: 2px solid #fff;"></span>
+          </div>
+          <span style="font-size: 0.8rem; font-family: monospace; color: rgba(255,255,255,0.45);">aliakbar.studio /
+            dashboard-sandbox</span>
+        </div>
+
+        <div
+          style="padding: 44px 30px; position: relative; min-height: 280px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+          <!-- Floating interactive bubbles -->
+          <div class="toy-bubble" style="top: 25px; left: 55px;"></div>
+          <div class="toy-bubble" style="bottom: 35px; right: 75px;"></div>
+          <div class="toy-bubble" style="top: 105px; right: 185px;"></div>
+
+          <div class="playful-brutal-card" id="showcase-card"
+            style="width: 350px; text-align: center; border-color: var(--color-brand-blue); background: rgba(15, 23, 42, 0.9); box-shadow: 0 15px 35px rgba(0,0,0,0.5);">
+            <div style="font-size: 2.2rem; margin-bottom: 12px;" id="showcase-card-icon">⚡</div>
+            <h3 class="playful-title" style="font-size: 1.3rem;">Tactile UI Simulator</h3>
+            <p class="playful-text" style="font-size: 0.85rem; color: rgba(255,255,255,0.65); margin-bottom: 20px;">
+              Fully responsive UI layout. Tweak theme variables above or trigger layout shocks with the tactile button
+              below.
+            </p>
+            <button class="bouncy-btn btn-sm" onclick="triggerCardVibe(event)"
+              style="width: 100%; justify-content: center;">
+              💥 Shock Layout!
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Bento Section -->
+  <section class="features" id="about" aria-labelledby="about-heading">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="pill-badge">About the Studio</div>
+        <h2 class="section-title" id="about-heading" style="font-size: clamp(2rem, 5vw, 3rem);">Identity &amp;
+          Principles</h2>
+        <p class="section-subtitle">A balanced fusion of visual presentation, code structures, and automated solutions.
+        </p>
+      </div>
+
+      <div class="bento-showcase">
+        <!-- Main profile -->
+        <div class="playful-brutal-card bento-span-2">
+          <h3 class="playful-title">✨ Muhammad Ali Akbar Rouf Bachas</h3>
+          <p class="playful-text" style="margin-bottom: 16px;">
+            Professionally known as <strong>Aliakbar</strong>. I am a tech creator focusing on building interactive
+            responsive frontends, clean database configurations, and robust Python scraper scripting.
+          </p>
+          <p class="playful-text">
+            I believe software should be highly functional, clean, and delight the user with modern micro-interactions.
+            My layout architecture emphasizes strict structure, zero bloated packages, and direct speed.
+          </p>
+        </div>
+
+        <!-- Meta list -->
+        <div class="playful-brutal-card">
+          <h3 class="playful-title">✉️ Direct Channel</h3>
+          <p class="playful-text" style="font-size: 0.88rem; line-height: 1.8;">
+            <strong>Primary Contact:</strong><br>
+            <a href="mailto:aliakbar14074@gmail.com"
+              style="color: var(--color-brand-blue); text-decoration: underline; font-weight: 700;">aliakbar14074@gmail.com</a><br><br>
+            <strong>Education Focus:</strong><br>
+            Informatika angkatan 2023 – 2027.<br>
+            Full-Stack development, AI Automation, Database administration.
+          </p>
+        </div>
+
+        <!-- Philosophy details -->
+        <div class="playful-brutal-card">
+          <h3 class="playful-title">⚙️ Backend Stability</h3>
+          <p class="playful-text">
+            Deploying organized APIs, modular database setups (MySQL, Postgres), and synced Google Sheets sheets for
+            swift data access.
+          </p>
+        </div>
+
+        <div class="playful-brutal-card bento-span-2">
+          <h3 class="playful-title">🎨 Frontend Responsive Standards</h3>
+          <p class="playful-text">
+            Structuring modular code elements utilizing React, Vite bundlers, and vanilla CSS grids/flexboxes optimized
+            for seamless viewports across mobile devices, tablets, laptops, and large monitors.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Capability Section -->
+  <section class="how-it-works" id="skills" aria-labelledby="skills-heading">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="pill-badge">Arsenal</div>
+        <h2 class="section-title" id="skills-heading">Capabilities Matrix</h2>
+        <p class="section-subtitle">A collection of languages and frameworks I command to implement software products.
+        </p>
+      </div>
+
+      <div class="bento-showcase">
+        <!-- Frontend -->
+        <div class="playful-brutal-card">
+          <h3 class="playful-title"
+            style="color: var(--color-brand-blue); display: flex; align-items: center; gap: 8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+            </svg>
+            Frontend Design
+          </h3>
+          <p class="playful-text" style="font-size: 0.85rem; margin-bottom: 16px;">Building clean layouts with
+            high-precision components.</p>
+          <div class="bubble-tags">
+            <span class="bubble-tag">React / Vite</span>
+            <span class="bubble-tag">TypeScript</span>
+            <span class="bubble-tag">Tailwind CSS v4</span>
+            <span class="bubble-tag">Figma Design</span>
+            <span class="bubble-tag">CSS Flex &amp; Grid</span>
+            <span class="bubble-tag">Dynamic Transitions</span>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="playful-brutal-card">
+          <h3 class="playful-title"
+            style="color: var(--color-brand-yellow); display: flex; align-items: center; gap: 8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+            </svg>
+            Backend &amp; DB
+          </h3>
+          <p class="playful-text" style="font-size: 0.85rem; margin-bottom: 16px;">Configuring APIs, structural
+            databases, and server flows.</p>
+          <div class="bubble-tags">
+            <span class="bubble-tag">Laravel PHP</span>
+            <span class="bubble-tag">Node.js</span>
+            <span class="bubble-tag">Express.js</span>
+            <span class="bubble-tag">REST APIs</span>
+            <span class="bubble-tag">MySQL &amp; Postgres</span>
+            <span class="bubble-tag">Google Sheets API</span>
+          </div>
+        </div>
+
+        <!-- Python automation -->
+        <div class="playful-brutal-card">
+          <h3 class="playful-title"
+            style="color: var(--color-brand-teal); display: flex; align-items: center; gap: 8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+              <polyline points="22 4 12 14.01 9 11.01" />
+            </svg>
+            Automations &amp; ML
+          </h3>
+          <p class="playful-text" style="font-size: 0.85rem; margin-bottom: 16px;">Scripting data collectors and
+            scheduling automations.</p>
+          <div class="bubble-tags">
+            <span class="bubble-tag">Python Scripting</span>
+            <span class="bubble-tag">Machine Learning</span>
+            <span class="bubble-tag">Scikit-Learn</span>
+            <span class="bubble-tag">Web Scraping</span>
+            <span class="bubble-tag">API Automations</span>
+            <span class="bubble-tag">C++ &amp; Java OOP</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- creations space -->
+  <section class="pricing" id="works" aria-labelledby="works-heading">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="pill-badge">Works</div>
+        <h2 class="section-title" id="works-heading">Creations Directory</h2>
+        <p class="section-subtitle">Real web applications and scripting systems currently operating live.</p>
+      </div>
+
+      <div class="bento-showcase">
+        <!-- Work 1 -->
+        <div class="playful-brutal-card">
+          <div style="font-size: 2rem; margin-bottom: 12px;">🌍</div>
+          <h3 class="playful-title">MY JOURNEY v1</h3>
+          <p class="playful-text" style="font-size: 0.85rem; margin-bottom: 20px;">
+            A detailed academic and file archive portfolio showcasing courses and projects using a glassmorphic
+            dashboard interface.
+          </p>
+          <a href="https://my-journey-v-1.vercel.app/" target="_blank" rel="noopener"
+            class="work-link bouncy-btn btn-sm" style="border: 2px solid #000; box-shadow: 3px 3px 0 #000;">
+            Visit Project ↗
+          </a>
+        </div>
+
+        <!-- Work 2 -->
+        <div class="playful-brutal-card">
+          <div style="font-size: 2rem; margin-bottom: 12px;">🤖</div>
+          <h3 class="playful-title">YouTube Auto Bot</h3>
+          <p class="playful-text" style="font-size: 0.85rem; margin-bottom: 20px;">
+            A Python workflow script configured with the YouTube Data API v3 to automate video scheduling and upload
+            operations.
+          </p>
+          <a href="https://github.com/Aliakbar23" target="_blank" rel="noopener" class="work-link bouncy-btn btn-sm"
+            style="border: 2px solid #000; box-shadow: 3px 3px 0 #000; background: var(--color-brand-yellow);">
+            View Source 🤖
+          </a>
+        </div>
+
+        <!-- Work 3 -->
+        <div class="playful-brutal-card">
+          <div style="font-size: 2rem; margin-bottom: 12px;">📈</div>
+          <h3 class="playful-title">Money Control v3</h3>
+          <p class="playful-text" style="font-size: 0.85rem; margin-bottom: 20px;">
+            Personal ledger database app syncing transactions instantly using the Google Sheets API as a datastore.
+          </p>
+          <a href="https://moneycontrol-v-3.vercel.app" target="_blank" rel="noopener"
+            class="work-link bouncy-btn btn-sm"
+            style="border: 2px solid #000; box-shadow: 3px 3px 0 #000; background: var(--color-brand-teal);">
+            Visit Project 📈
+          </a>
+        </div>
+
+        <!-- Work 4 -->
+        <div class="playful-brutal-card">
+          <div style="font-size: 2rem; margin-bottom: 12px;">🧠</div>
+          <h3 class="playful-title">Property ML Predictor</h3>
+          <p class="playful-text" style="font-size: 0.85rem; margin-bottom: 20px;">
+            ML regression module modeled via Python and Scikit-learn evaluating property rates based on municipal
+            inputs.
+          </p>
+          <a href="https://github.com/Aliakbar23" target="_blank" rel="noopener" class="work-link bouncy-btn btn-sm"
+            style="border: 2px solid #000; box-shadow: 3px 3px 0 #000; background: var(--color-brand-orange);">
+            View Source 🧠
+          </a>
+        </div>
+
+        <!-- Work 5 -->
+        <div class="playful-brutal-card">
+          <div style="font-size: 2rem; margin-bottom: 12px;">💸</div>
+          <h3 class="playful-title">Money Management</h3>
+          <p class="playful-text" style="font-size: 0.85rem; margin-bottom: 20px;">
+            Full-stack cash flow dashboard built with modular React hooks allowing manual transaction tracking and
+            analytics.
+          </p>
+          <a href="https://moneymanagement-pe4skuo4m-aliakbar23s-projects.vercel.app/" target="_blank" rel="noopener"
+            class="work-link bouncy-btn btn-sm"
+            style="border: 2px solid #000; box-shadow: 3px 3px 0 #000; background: #fff; color: #000;">
+            Visit Project 💸
+          </a>
+        </div>
+
+        <!-- Work 6 -->
+        <div class="playful-brutal-card">
+          <div style="font-size: 2rem; margin-bottom: 12px;">👓</div>
+          <h3 class="playful-title">VR/AR Campus Tour</h3>
+          <p class="playful-text" style="font-size: 0.85rem; margin-bottom: 20px;">
+            A responsive WebXR simulation drafted using Three.js and A-Frame components showcasing structural college
+            tour areas.
+          </p>
+          <a href="https://aliakbar23.github.io/VRAR/" target="_blank" rel="noopener"
+            class="work-link bouncy-btn btn-sm"
+            style="border: 2px solid #000; box-shadow: 3px 3px 0 #000; background: var(--color-brand-blue);">
+            Launch Tour 🕶️
+          </a>
+        </div>
+  </section>
+
+  <!-- Credentials & Certificates Section -->
+  <section class="features" id="credentials" aria-labelledby="credentials-heading">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="pill-badge" style="color: var(--color-brand-yellow); border-color: var(--color-brand-yellow); background: rgba(245, 158, 11, 0.1);">Achievements</div>
+        <h2 class="section-title" id="credentials-heading">Certificates &amp; Credentials</h2>
+        <p class="section-subtitle">A curated gallery of my certifications and accomplishments in software engineering and frontend layout design.</p>
+      </div>
+
+      <div class="bento-showcase" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px;">
+        
+        <!-- Cert 1 -->
+        <div class="playful-brutal-card" style="cursor: pointer; padding: 20px;" onclick="openLightbox('img/1.jpg', 'Artificial Intelligence Fundamentals')">
+          <div style="height: 170px; overflow: hidden; border-radius: 12px; border: 3px solid #000; margin-bottom: 14px; background: #05070f; display: flex; align-items: center; justify-content: center; position: relative;">
+            <img src="img/1.jpg" alt="Artificial Intelligence Fundamentals" style="max-height: 100%; max-width: 100%; object-fit: contain; transition: transform 0.3s;" class="cert-img-hover">
+          </div>
+          <h3 class="playful-title" style="font-size: 1.05rem; margin-bottom: 4px;">Artificial Intelligence Fundamentals</h3>
+          <span style="font-size: 0.72rem; color: var(--color-brand-blue); text-transform: uppercase; font-family: var(--font-header); font-weight: 700;">Great Learning Academy</span>
+        </div>
+
+        <!-- Cert 2 -->
+        <div class="playful-brutal-card" style="cursor: pointer; padding: 20px;" onclick="openLightbox('img/2.jpg', 'Cyber Security Masterclass')">
+          <div style="height: 170px; overflow: hidden; border-radius: 12px; border: 3px solid #000; margin-bottom: 14px; background: #05070f; display: flex; align-items: center; justify-content: center; position: relative;">
+            <img src="img/2.jpg" alt="Cyber Security Masterclass" style="max-height: 100%; max-width: 100%; object-fit: contain; transition: transform 0.3s;" class="cert-img-hover">
+          </div>
+          <h3 class="playful-title" style="font-size: 1.05rem; margin-bottom: 4px;">Cyber Security Masterclass</h3>
+          <span style="font-size: 0.72rem; color: var(--color-brand-yellow); text-transform: uppercase; font-family: var(--font-header); font-weight: 700;">INFOSEC TRAIN / Cursa</span>
+        </div>
+
+        <!-- Cert 3 -->
+        <div class="playful-brutal-card" style="cursor: pointer; padding: 20px;" onclick="openLightbox('img/3.jpg', 'Rahasia Portofolio UI/UX Dilirik Perusahaan')">
+          <div style="height: 170px; overflow: hidden; border-radius: 12px; border: 3px solid #000; margin-bottom: 14px; background: #05070f; display: flex; align-items: center; justify-content: center; position: relative;">
+            <img src="img/3.jpg" alt="UI/UX Portfolio Secret Workshop" style="max-height: 100%; max-width: 100%; object-fit: contain; transition: transform 0.3s;" class="cert-img-hover">
+          </div>
+          <h3 class="playful-title" style="font-size: 1.05rem; margin-bottom: 4px;">Rahasia Portofolio UI/UX</h3>
+          <span style="font-size: 0.72rem; color: var(--color-brand-teal); text-transform: uppercase; font-family: var(--font-header); font-weight: 700;">Garuda Cyber Indonesia</span>
+        </div>
+
+        <!-- Cert 4 -->
+        <div class="playful-brutal-card" style="cursor: pointer; padding: 20px;" onclick="openLightbox('img/4.jpg', 'Menjadi Seorang BackEnd Engineer')">
+          <div style="height: 170px; overflow: hidden; border-radius: 12px; border: 3px solid #000; margin-bottom: 14px; background: #05070f; display: flex; align-items: center; justify-content: center; position: relative;">
+            <img src="img/4.jpg" alt="Menjadi Seorang BackEnd Engineer" style="max-height: 100%; max-width: 100%; object-fit: contain; transition: transform 0.3s;" class="cert-img-hover">
+          </div>
+          <h3 class="playful-title" style="font-size: 1.05rem; margin-bottom: 4px;">Menjadi Seorang BackEnd Engineer</h3>
+          <span style="font-size: 0.72rem; color: var(--color-brand-orange); text-transform: uppercase; font-family: var(--font-header); font-weight: 700;">Semo PENS (Surabaya)</span>
+        </div>
+
+        <!-- Cert 5 -->
+        <div class="playful-brutal-card" style="cursor: pointer; padding: 20px;" onclick="openLightbox('img/5.jpg', 'Samsung Innovation Campus — Python Course')">
+          <div style="height: 170px; overflow: hidden; border-radius: 12px; border: 3px solid #000; margin-bottom: 14px; background: #05070f; display: flex; align-items: center; justify-content: center; position: relative;">
+            <img src="img/5.jpg" alt="Samsung Innovation Campus" style="max-height: 100%; max-width: 100%; object-fit: contain; transition: transform 0.3s;" class="cert-img-hover">
+          </div>
+          <h3 class="playful-title" style="font-size: 1.05rem; margin-bottom: 4px;">Samsung Innovation — Python</h3>
+          <span style="font-size: 0.72rem; color: var(--color-brand-blue); text-transform: uppercase; font-family: var(--font-header); font-weight: 700;">Samsung &amp; Skilvul</span>
+        </div>
+
+        <!-- Cert 6 -->
+        <div class="playful-brutal-card" style="cursor: pointer; padding: 20px;" onclick="openLightbox('img/6.png', 'HR Webinar — Siap Jadi HRD')">
+          <div style="height: 170px; overflow: hidden; border-radius: 12px; border: 3px solid #000; margin-bottom: 14px; background: #05070f; display: flex; align-items: center; justify-content: center; position: relative;">
+            <img src="img/6.png" alt="HR Webinar Siap Jadi HRD" style="max-height: 100%; max-width: 100%; object-fit: contain; transition: transform 0.3s;" class="cert-img-hover">
+          </div>
+          <h3 class="playful-title" style="font-size: 1.05rem; margin-bottom: 4px;">HR Webinar — Siap Jadi HRD</h3>
+          <span style="font-size: 0.72rem; color: var(--color-brand-yellow); text-transform: uppercase; font-family: var(--font-header); font-weight: 700;">PT Sumerdaya Palapa Indo</span>
+        </div>
+
+        <!-- Cert 7 -->
+        <div class="playful-brutal-card" style="cursor: pointer; padding: 20px;" onclick="openLightbox('img/7.png', 'Asia E-Sport Mobile Legends Turnamen')">
+          <div style="height: 170px; overflow: hidden; border-radius: 12px; border: 3px solid #000; margin-bottom: 14px; background: #05070f; display: flex; align-items: center; justify-content: center; position: relative;">
+            <img src="img/7.png" alt="Asia E-Sport Mobile Legends Turnamen" style="max-height: 100%; max-width: 100%; object-fit: contain; transition: transform 0.3s;" class="cert-img-hover">
+          </div>
+          <h3 class="playful-title" style="font-size: 1.05rem; margin-bottom: 4px;">Asia E-Sport ML Turnamen</h3>
+          <span style="font-size: 0.72rem; color: var(--color-brand-teal); text-transform: uppercase; font-family: var(--font-header); font-weight: 700;">ITB Asia Malang</span>
+        </div>
+
+        <!-- Cert 8 -->
+        <div class="playful-brutal-card" style="cursor: pointer; padding: 20px;" onclick="openLightbox('img/8.png', 'Zero to Hero Career in AI World')">
+          <div style="height: 170px; overflow: hidden; border-radius: 12px; border: 3px solid #000; margin-bottom: 14px; background: #05070f; display: flex; align-items: center; justify-content: center; position: relative;">
+            <img src="img/8.png" alt="Zero to Hero Career in AI World" style="max-height: 100%; max-width: 100%; object-fit: contain; transition: transform 0.3s;" class="cert-img-hover">
+          </div>
+          <h3 class="playful-title" style="font-size: 1.05rem; margin-bottom: 4px;">Zero to Hero Career in AI</h3>
+          <span style="font-size: 0.72rem; color: var(--color-brand-orange); text-transform: uppercase; font-family: var(--font-header); font-weight: 700;">Celerates &amp; Terra AI</span>
+        </div>
+
+        <!-- Cert 9 -->
+        <div class="playful-brutal-card" style="cursor: pointer; padding: 20px;" onclick="openLightbox('img/9.jpg', 'Juara 3 Turnamen Asia E-Sport Mobile Legends')">
+          <div style="height: 170px; overflow: hidden; border-radius: 12px; border: 3px solid #000; margin-bottom: 14px; background: #05070f; display: flex; align-items: center; justify-content: center; position: relative;">
+            <img src="img/9.jpg" alt="Juara 3 Turnamen Asia E-Sport Mobile Legends" style="max-height: 100%; max-width: 100%; object-fit: contain; transition: transform 0.3s;" class="cert-img-hover">
+          </div>
+          <h3 class="playful-title" style="font-size: 1.05rem; margin-bottom: 4px;">Juara 3 Turnamen E-Sport ML</h3>
+          <span style="font-size: 0.72rem; color: var(--color-brand-blue); text-transform: uppercase; font-family: var(--font-header); font-weight: 700;">Award untuk Tim Iwak Gerih</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Sandbox Labs -->
+  <section class="testimonials" id="playground" aria-labelledby="lab-heading">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="pill-badge">UI Sandbox</div>
+        <h2 class="section-title" id="lab-heading">Visual Experiment Area</h2>
+        <p class="section-subtitle">Play with real-time UI components designed to test browser state, animations, and
+          touch accuracy.</p>
+      </div>
+
+      <!-- Full-Width Interactive CLI Terminal Simulator (Blackbox AI CLI) -->
+      <div style="margin-bottom: 40px; max-width: 900px; margin-left: auto; margin-right: auto;">
+        <div class="terminal-window">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span style="background: #ef4444;"></span>
+              <span style="background: #eab308;"></span>
+              <span style="background: #22c55e;"></span>
+            </div>
+            <span
+              style="font-size: 0.72rem; color: rgba(255,255,255,0.45); font-weight: 700;">aliakbar-terminal.sh</span>
+          </div>
+          <div class="terminal-body" id="terminal-body">
+            <div class="terminal-welcome">Welcome Aliakbar</div>
+            <div style="color: rgba(255,255,255,0.4); margin-bottom: 12px;">Type 'help' to see all available commands.
+            </div>
+            <div id="terminal-output"></div>
+            <div class="terminal-prompt">
+              <span style="color: var(--color-brand-blue); font-weight: bold;">aliakbar@studio:~$</span>
+              <input type="text" id="terminal-input" class="terminal-input" placeholder="type a command..." autofocus
+                autocomplete="off" aria-label="Terminal prompt command input">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bento-showcase" style="max-width: 900px; margin: 0 auto;">
+
+        <!-- Spark Confetti -->
+        <div class="playful-brutal-card" style="text-align: center;">
+          <h3 class="playful-title">🌟 Confetti Trigger</h3>
+          <p class="playful-text" style="font-size: 0.82rem; margin-bottom: 20px;">
+            Generate a flurry of colorful sparks from your clicking point instantly!
+          </p>
+          <button class="bouncy-btn" onclick="burstConfettiLaunch(event)"
+            style="width: 100%; justify-content: center; background: var(--color-brand-blue);">
+            ✨ Launch Confetti!
+          </button>
+        </div>
+
+        <!-- Interactive Color changer -->
+        <div class="playful-brutal-card" style="text-align: center;">
+          <h3 class="playful-title">🎨 Tweak Accents</h3>
+          <p class="playful-text" style="font-size: 0.82rem; margin-bottom: 20px;">
+            Modify the visual style tokens of our custom floating bubbles dynamically.
+          </p>
+          <div style="display:flex; justify-content:center; gap:12px; margin-top: 10px;">
+            <button
+              style="width:34px; height:34px; border-radius:50%; background:#2563eb; border:3px solid #000; cursor:pointer;"
+              onclick="changeBubbleTheme('#2563eb')" aria-label="Change bubble accent to Blue"></button>
+            <button
+              style="width:34px; height:34px; border-radius:50%; background:#f59e0b; border:3px solid #000; cursor:pointer;"
+              onclick="changeBubbleTheme('#f59e0b')" aria-label="Change bubble accent to Yellow"></button>
+            <button
+              style="width:34px; height:34px; border-radius:50%; background:#0d9488; border:3px solid #000; cursor:pointer;"
+              onclick="changeBubbleTheme('#0d9488')" aria-label="Change bubble accent to Teal"></button>
+            <button
+              style="width:34px; height:34px; border-radius:50%; background:#ea580c; border:3px solid #000; cursor:pointer;"
+              onclick="changeBubbleTheme('#ea580c')" aria-label="Change bubble accent to Orange"></button>
+          </div>
+        </div>
+
+        <!-- Fortune teller oracle -->
+        <div class="playful-brutal-card" style="text-align: center;">
+          <h3 class="playful-title">🔮 Snippet Oracle</h3>
+          <p class="playful-text" id="oracle-field"
+            style="font-size: 0.82rem; min-height: 48px; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.7); line-height: 1.4; margin-bottom: 20px;">
+            "Click below to read a random snippet of developer wisdom."
+          </p>
+          <button class="bouncy-btn bouncy-btn-outline" onclick="tellDeveloperFortune()"
+            style="width: 100%; justify-content: center; border-color: #fff;">
+            🔮 Summon Quote
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Connect Section -->
+  <section class="cta-section" id="contact" aria-labelledby="contact-heading">
+    <div class="section-container">
+      <div class="cta-card"
+        style="border-radius: 24px; border: 3px solid #000; background: rgba(15,23,42,0.9); box-shadow: 6px 6px 0 #000;">
+        <div class="cta-glow" aria-hidden="true"
+          style="background: radial-gradient(circle, rgba(37,99,235,0.15) 0%, transparent 60%);"></div>
+        <div class="pill-badge" style="margin-bottom: 20px;">Connect</div>
+        <h2 class="cta-title" style="font-size: clamp(1.8rem, 4vw, 2.5rem);">Let's Start a Conversation!</h2>
+        <p class="cta-subtitle">If you have a database problem, a workflow automation project, or want to discuss a
+          clean UI layout, get in touch.</p>
+
+        <!-- Premium Large Social Bar Just Above Footer -->
+        <div class="premium-social-bar">
+          <a href="https://www.instagram.com/_bachas" target="_blank" rel="noopener"
+            class="premium-social-icon social-ig bouncy-hover" aria-label="Instagram Profile Link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </a>
+          <a href="https://www.tiktok.com/@maarb_p" target="_blank" rel="noopener"
+            class="premium-social-icon social-tiktok bouncy-hover" aria-label="TikTok Profile Link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.78a8.25 8.25 0 0 0 4.83 1.55V6.88a4.85 4.85 0 0 1-1.06-.19z" />
+            </svg>
+          </a>
+          <a href="mailto:aliakbar14074@gmail.com" class="premium-social-icon social-email bouncy-hover"
+            aria-label="Send Direct Email Link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/muhammad-ali-akbar-rouf-bachas-b261392a1/" target="_blank" rel="noopener"
+            class="premium-social-icon social-linkedin bouncy-hover" aria-label="LinkedIn Profile Link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zm2-3a2 2 0 0 1 0-4 2 2 0 1 0 0 4z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo footer-logo" id="footer-logo" aria-label="Aliakbar Portfolio Home">
+          <div class="logo-icon" aria-hidden="true" style="position: relative; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;">
+            <svg width="30" height="30" viewBox="0 0 34 34" fill="none" style="filter: drop-shadow(2px 2px 0px #000);">
+              <rect width="28" height="28" x="4" y="4" rx="8" fill="var(--color-brand-yellow)" stroke="#000" stroke-width="2.5" />
+              <rect width="28" height="28" x="0" y="0" rx="8" fill="var(--color-brand-blue)" stroke="#000" stroke-width="2.5" />
+              <text x="14" y="19" text-anchor="middle" font-size="14" font-weight="900" fill="white" font-family="Space Grotesk">A</text>
+            </svg>
+          </div>
+          <span class="logo-text">Aliakbar</span>
+        </a>
+        <p class="footer-tagline">Designing systems, structuring responsive UI code, and implementing automations.</p>
+        <div class="footer-social" role="list" aria-label="Sosmed links">
+          <a href="https://github.com/Aliakbar23" target="_blank" rel="noopener" class="social-link" id="footer-github"
+            aria-label="GitHub" role="listitem">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/muhammad-ali-akbar-rouf-bachas-b261392a1/" target="_blank" rel="noopener"
+            class="social-link" id="footer-linkedin" aria-label="LinkedIn" role="listitem">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zm2-3a2 2 0 0 1 0-4 2 2 0 1 0 0 4z" />
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/_bachas" target="_blank" rel="noopener" class="social-link"
+            id="footer-instagram" aria-label="Instagram" role="listitem">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer capsule nav">
+        <div class="footer-col">
+          <h3 class="footer-col-title">Navigation</h3>
+          <ul role="list">
+            <li><a href="#about" id="footer-link-about">Studio</a></li>
+            <li><a href="#skills" id="footer-link-skills">Capabilities</a></li>
+            <li><a href="#works" id="footer-link-works">Creations</a></li>
+            <li><a href="#playground" id="footer-link-playground">UI Lab</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-col-title">Creations</h3>
+          <ul role="list">
+            <li><a href="https://my-journey-v-1.vercel.app/" target="_blank" rel="noopener">My Journey</a></li>
+            <li><a href="https://moneycontrol-v-3.vercel.app" target="_blank" rel="noopener">Money Control v3</a></li>
+            <li><a href="https://aliakbar23.github.io/VRAR/" target="_blank" rel="noopener">AR Campus Tour</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-col-title">Social</h3>
+          <ul role="list">
+            <li><a href="https://github.com/Aliakbar23" target="_blank" rel="noopener">GitHub ↗</a></li>
+            <li><a href="https://www.linkedin.com/in/muhammad-ali-akbar-rouf-bachas-b261392a1/" target="_blank"
+                rel="noopener">LinkedIn ↗</a></li>
+            <li><a href="https://www.instagram.com/_bachas" target="_blank" rel="noopener">Instagram ↗</a></li>
+            <li><a href="https://www.tiktok.com/@maarb_p" target="_blank" rel="noopener">TikTok ↗</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-container">
+        <p class="footer-copy">© 2026 Muhammad Ali Akbar Rouf Bachas. All rights reserved.</p>
+        <p class="footer-made">Built with Aliakbar</p>
+      </div>
+    </div>
+  <!-- Lightbox Modal for Certificates -->
+  <div id="cert-lightbox" style="position: fixed; inset: 0; background: rgba(11, 15, 25, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); z-index: 1000000; display: none; align-items: center; justify-content: center; padding: 24px;" onclick="closeLightbox()">
+    <div style="position: relative; max-width: 850px; width: 100%; max-height: 85vh; display: flex; flex-direction: column; align-items: center; gap: 14px;" onclick="event.stopPropagation()">
+      <button onclick="closeLightbox()" style="position: absolute; top: -50px; right: 0; background: var(--color-brand-blue); border: 3px solid #000; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; color: #fff; cursor: pointer; box-shadow: 3px 3px 0 #000; font-family: var(--font-header); font-weight: 900; font-size: 1.3rem; transition: var(--transition-spring);" class="bouncy-hover">×</button>
+      
+      <button id="lightbox-prev" onclick="prevLightbox(event)" style="position: absolute; left: -60px; top: 50%; transform: translateY(-50%); background: var(--color-brand-yellow); border: 3px solid #000; border-radius: 50%; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; color: #000; cursor: pointer; box-shadow: 3px 3px 0 #000; font-family: var(--font-header); font-weight: 900; font-size: 1.2rem; transition: var(--transition-spring);" class="bouncy-hover">←</button>
+      <button id="lightbox-next" onclick="nextLightbox(event)" style="position: absolute; right: -60px; top: 50%; transform: translateY(-50%); background: var(--color-brand-yellow); border: 3px solid #000; border-radius: 50%; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; color: #000; cursor: pointer; box-shadow: 3px 3px 0 #000; font-family: var(--font-header); font-weight: 900; font-size: 1.2rem; transition: var(--transition-spring);" class="bouncy-hover">→</button>
+
+      <img id="lightbox-img" src="" alt="Full Certificate View" style="max-width: 100%; max-height: 70vh; border: 3px solid #000; border-radius: 16px; box-shadow: 0 20px 50px rgba(0,0,0,0.6); object-fit: contain;">
+      
+      <div style="display: flex; align-items: center; justify-content: space-between; width: 100%; max-width: 100%; padding: 0 10px; flex-wrap: wrap; gap: 10px;">
+        <h3 id="lightbox-title" style="font-family: var(--font-header); font-size: 1.25rem; font-weight: bold; color: #fff; text-shadow: 2px 2px 0 #000; margin: 0;">Certificate Title</h3>
+        <span id="lightbox-index" style="font-family: var(--font-header); font-size: 0.9rem; font-weight: bold; color: var(--color-brand-yellow); background: #0b0f19; border: 2.5px solid #000; padding: 4px 14px; border-radius: 8px; box-shadow: 2px 2px 0 #000;">1 / 9</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
